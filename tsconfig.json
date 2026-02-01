@@ -7,6 +7,10 @@
     "outDir": "./dist",
     "rootDir": "./src",
 
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"]
+    },
     "sourceMap": true,
     "removeComments": true,
 
@@ -22,5 +26,5 @@
     "strict": false,
     "noImplicitAny": false
   },
-    "exclude": ["test", "**/*.spec.ts", "**/*.e2e-spec.ts"]
+  "exclude": ["test", "**/*.spec.ts", "**/*.e2e-spec.ts"]
 }
