@@ -1,7 +1,7 @@
-import { Comment } from './comments/comments.Aentity';
-import { ThePost } from './posts/posts.Aentity';
-import { TheReaction } from './Reactions/Reactions.Aentity';
-import { TheReplay } from './Replays/Replays.Aentity';
+import { Comment } from './comments/comments.entity';
+import { ThePost } from './posts/posts.entity';
+import { TheReaction } from './Reactions/Reactions.entity';
+import { TheReplay } from './Replays/Replays.entity';
 
 export const CURRENT_TIMESTAMP = 'CURRENT_TIMESTAMP';
 

@@ -7,14 +7,14 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { User } from './users.aentites';
+import { User } from './users.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateUserDTO } from './DTOs/CreateUser.DTO';
-import bcrypt from 'node_modules/bcryptjs';
+import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
 import { LoginUserDTO } from './DTOs/LoginUser.DTO';
-import { JWT_Payload } from 'src/utils';
+import { JWT_Payload } from '../utils';
 import { UpdateUserDTO } from './DTOs/UpdateUser.DTO';
 import { VisibleUserDTO } from './DTOs/VisibleUser.DTO';
 

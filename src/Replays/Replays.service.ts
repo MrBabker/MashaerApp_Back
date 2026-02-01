@@ -7,9 +7,9 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/users.aentites';
-import { TheReplay } from './Replays.Aentity';
-import { Comment } from 'src/comments/comments.Aentity';
+import { User } from '../users/users.entity';
+import { TheReplay } from './Replays.entity';
+import { Comment } from '../comments/comments.entity';
 import { CreateReplayDTO } from './DTOs/CreateReplay.DTO';
 import { UpdateReplayDTO } from './DTOs/UpdateReplay.DTO';
 

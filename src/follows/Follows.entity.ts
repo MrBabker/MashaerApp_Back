@@ -1,5 +1,5 @@
-import { Comment } from 'src/comments/comments.Aentity';
-import { User } from 'src/users/users.aentites';
+import { Comment } from '../comments/comments.entity';
+import { User } from '../users/users.entity';
 import {
   CreateDateColumn,
   Entity,

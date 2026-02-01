@@ -1,7 +1,7 @@
-import { Comment } from 'src/comments/comments.Aentity';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { TheReplay } from 'src/Replays/Replays.Aentity';
-import { User } from 'src/users/users.aentites';
+import { Comment } from '../comments/comments.entity';
+import { ThePost } from '../posts/posts.entity';
+import { TheReplay } from '../Replays/Replays.entity';
+import { User } from '../users/users.entity';
 import {
   Column,
   CreateDateColumn,

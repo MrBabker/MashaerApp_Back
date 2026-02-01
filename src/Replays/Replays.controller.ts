@@ -10,9 +10,9 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 import { ReplaysService } from './Replays.service';
 import { CreateReplayDTO } from './DTOs/CreateReplay.DTO';
 import { UpdateReplayDTO } from './DTOs/UpdateReplay.DTO';

@@ -1,5 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { CURRENT_USER_KEY, JWT_Payload } from 'src/utils';
+import { CURRENT_USER_KEY, JWT_Payload } from '../../utils';
 
 export const CurrntDecorator = createParamDecorator(
   (data, context: ExecutionContext) => {

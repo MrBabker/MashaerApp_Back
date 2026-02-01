@@ -4,13 +4,13 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TheReaction } from './Reactions.Aentity';
+import { TheReaction } from './Reactions.entity';
 import { Repository } from 'typeorm';
 import { CreateReactionDTO } from './DTOs/CreatReaction.DTO';
-import { User } from 'src/users/users.aentites';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { Comment } from 'src/comments/comments.Aentity';
-import { TheReplay } from 'src/Replays/Replays.Aentity';
+import { User } from '../users/users.entity';
+import { ThePost } from '../posts/posts.entity';
+import { Comment } from '../comments/comments.entity';
+import { TheReplay } from '../Replays/Replays.entity';
 import { UpdateReactionDTO } from './DTOs/UpdateReaction.DTO';
 import { ReactionsGateway } from './reactions.gateway';
 

@@ -13,11 +13,11 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { ThePost } from './posts.Aentity';
-import { User } from 'src/users/users.aentites';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { ThePost } from './posts.entity';
+import { User } from '../users/users.entity';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 import { CreatePostDTO } from './DTOs/CreatePost.DTO';
 import { PostsService } from './posts.service';
 import { UpdatePostDTO } from './DTOs/UpdatePost.DTO';

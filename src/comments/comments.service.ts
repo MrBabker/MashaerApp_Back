@@ -6,11 +6,11 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Comment } from './comments.Aentity';
+import { Comment } from './comments.entity';
 import { Repository } from 'typeorm';
-import { ThePost } from 'src/posts/posts.Aentity';
+import { ThePost } from '../posts/posts.entity';
 import { CreateCommentDTO } from './DTOs/CreateComment.DTO';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 import { UpdateCommentDTO } from './DTOs/UpdateComment.DTO';
 
 @Injectable()

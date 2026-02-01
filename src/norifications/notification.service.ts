@@ -4,12 +4,12 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TheNotification } from './notification.Aentity';
+import { TheNotification } from './notification.entity';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/users.aentites';
-import { notificationsTypes } from 'src/utils';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { Comment } from 'src/comments/comments.Aentity';
+import { User } from '../users/users.entity';
+import { notificationsTypes } from '../utils';
+import { ThePost } from '../posts/posts.entity';
+import { Comment } from '../comments/comments.entity';
 import { UpdateNotificationDTO } from './DTOs/UpdateNotification.DTO';
 import { NotificationsGateway } from './notifications.gateway';
 

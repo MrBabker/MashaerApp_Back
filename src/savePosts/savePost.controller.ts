@@ -9,14 +9,14 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { SavePostService } from './savePost.service';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 import { Repository } from 'typeorm';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { SavePost } from './savePost.Aentity';
+import { ThePost } from '../posts/posts.entity';
+import { SavePost } from './savePost.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('savepost')

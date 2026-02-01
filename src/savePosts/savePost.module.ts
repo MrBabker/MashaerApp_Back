@@ -3,16 +3,16 @@ import { SavePostController } from './savePost.controller';
 import { SavePostService } from './savePost.service';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { SYNChronize, tokenExpire } from 'src/utils';
+import { SYNChronize, tokenExpire } from '../utils';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from 'src/users/users.aentites';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { TheReaction } from 'src/Reactions/Reactions.Aentity';
-import { TheFollow } from 'src/follows/Follows.Aentity';
-import { TheNotification } from 'src/norifications/notification.Aentity';
-import { TheReplay } from 'src/Replays/Replays.Aentity';
-import { SavePost } from './savePost.Aentity';
-import { Comment } from 'src/comments/comments.Aentity';
+import { User } from '../users/users.entity';
+import { ThePost } from '../posts/posts.entity';
+import { TheReaction } from '../Reactions/Reactions.entity';
+import { TheFollow } from '../follows/Follows.entity';
+import { TheNotification } from '../norifications/notification.entity';
+import { TheReplay } from '../Replays/Replays.entity';
+import { SavePost } from './savePost.entity';
+import { Comment } from '../comments/comments.entity';
 
 @Module({
   imports: [

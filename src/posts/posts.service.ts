@@ -7,9 +7,9 @@ import {
 } from '@nestjs/common';
 import { CreatePostDTO } from './DTOs/CreatePost.DTO';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ThePost } from './posts.Aentity';
+import { ThePost } from './posts.entity';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 import { UpdatePostDTO } from './DTOs/UpdatePost.DTO';
 
 @Injectable()

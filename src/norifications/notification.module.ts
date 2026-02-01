@@ -3,17 +3,17 @@ import { NotificationsController } from './notification.controller';
 import { NotificationsService } from './notification.service';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { SYNChronize, tokenExpire } from 'src/utils';
+import { SYNChronize, tokenExpire } from '../utils';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { Comment } from 'src/comments/comments.Aentity';
-import { TheReplay } from 'src/Replays/Replays.Aentity';
-import { TheReaction } from 'src/Reactions/Reactions.Aentity';
-import { TheFollow } from 'src/follows/Follows.Aentity';
-import { User } from 'src/users/users.aentites';
-import { TheNotification } from './notification.Aentity';
+import { ThePost } from '../posts/posts.entity';
+import { Comment } from '../comments/comments.entity';
+import { TheReplay } from '../Replays/Replays.entity';
+import { TheReaction } from '../Reactions/Reactions.entity';
+import { TheFollow } from '../follows/Follows.entity';
+import { User } from '../users/users.entity';
+import { TheNotification } from './notification.entity';
 import { NotificationsGateway } from './notifications.gateway';
-import { SavePost } from 'src/savePosts/savePost.Aentity';
+import { SavePost } from '../savePosts/savePost.entity';
 
 @Module({
   imports: [

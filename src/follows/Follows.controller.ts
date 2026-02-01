@@ -9,9 +9,9 @@ import {
 } from '@nestjs/common';
 import { FollowsService } from './Follows.service';
 import { JwtService } from '@nestjs/jwt';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 
 @Controller('follows')
 export class FollowsController {

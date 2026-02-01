@@ -1,14 +1,14 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import { User } from './users/users.aentites';
-import { ThePost } from './posts/posts.Aentity';
-import { Comment } from './comments/comments.Aentity';
-import { TheReplay } from './Replays/Replays.Aentity';
-import { TheReaction } from './Reactions/Reactions.Aentity';
-import { TheFollow } from './follows/Follows.Aentity';
-import { TheNotification } from './norifications/notification.Aentity';
-import { SavePost } from './savePosts/savePost.Aentity';
+import { User } from './users/users.entity';
+import { ThePost } from './posts/posts.entity';
+import { Comment } from './comments/comments.entity';
+import { TheReplay } from './Replays/Replays.entity';
+import { TheReaction } from './Reactions/Reactions.entity';
+import { TheFollow } from './follows/Follows.entity';
+import { TheNotification } from './norifications/notification.entity';
+import { SavePost } from './savePosts/savePost.entity';
 
 const isProd = process.env.NODE_ENV === 'production';
 

@@ -10,12 +10,12 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 import { Repository } from 'typeorm';
 import { ReactionsService } from './Reactions.service';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 import { CreateReactionDTO } from './DTOs/CreatReaction.DTO';
 import { UpdateReactionDTO } from './DTOs/UpdateReaction.DTO';
 

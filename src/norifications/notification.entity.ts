@@ -1,4 +1,4 @@
-import { Comment } from 'src/comments/comments.Aentity';
+import { Comment } from '../comments/comments.entity';
 import {
   Column,
   CreateDateColumn,

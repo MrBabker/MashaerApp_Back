@@ -11,11 +11,11 @@ import {
 } from '@nestjs/common';
 import { NotificationsService } from './notification.service';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { AuthGuard } from 'src/users/gaurds/authUser.guard';
-import { CurrntDecorator } from 'src/users/decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import { AuthGuard } from '../users/gaurds/authUser.guard';
+import { CurrntDecorator } from '../users/decoders/currentUser.decoder';
+import type { JWT_Payload } from '../utils';
 import { CreateNotificationDTO } from './DTOs/CreateNotification.entity';
 import { UpdateNotificationDTO } from './DTOs/UpdateNotification.DTO';
 

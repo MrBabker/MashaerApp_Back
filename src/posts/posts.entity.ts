@@ -1,6 +1,7 @@
-import { Comment } from 'src/comments/comments.Aentity';
-import { TheReaction } from 'src/Reactions/Reactions.Aentity';
-import { User } from 'src/users/users.aentites';
+import { Comment } from '../comments/comments.entity';
+import { TheReaction } from '../Reactions/Reactions.entity';
+import { SavePost } from '../savePosts/savePost.entity';
+import { User } from '../users/users.entity';
 import {
   Column,
   CreateDateColumn,
@@ -11,12 +12,12 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('replays')
-export class TheReplay {
+@Entity('posts')
+export class ThePost {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 150, nullable: true })
+  @Column({ length: 150, nullable: false })
   feel: string;
 
   @Column({ nullable: false })
@@ -40,19 +41,26 @@ export class TheReplay {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @ManyToOne(() => User, (user) => user.comments, {
+  @ManyToOne(() => User, (user) => user.posts, {
     onDelete: 'CASCADE',
   })
   user: User;
 
-  @ManyToOne(() => Comment, (comment) => comment.replays, {
+  @OneToMany(() => Comment, (comments) => comments.post, {
+    cascade: true,
     onDelete: 'CASCADE',
   })
-  comment: Comment;
+  comments: Comment[];
 
-  @OneToMany(() => TheReaction, (reaction) => reaction.replay, {
+  @OneToMany(() => TheReaction, (reaction) => reaction.post, {
     cascade: true,
     onDelete: 'CASCADE',
   })
   reaction: TheReaction[];
+
+  @OneToMany(() => SavePost, (savePosts) => savePosts.post, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  savePosts: SavePost[];
 }

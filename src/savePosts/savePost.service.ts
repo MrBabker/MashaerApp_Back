@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { User } from 'src/users/users.aentites';
+import { ThePost } from '../posts/posts.entity';
+import { User } from '../users/users.entity';
 import { Repository } from 'typeorm';
-import { SavePost } from './savePost.Aentity';
+import { SavePost } from './savePost.entity';
 
 @Injectable()
 export class SavePostService {

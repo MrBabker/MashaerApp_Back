@@ -1,10 +1,10 @@
 import { Exclude } from 'class-transformer';
-import { Comment } from 'src/comments/comments.Aentity';
-import { TheFollow } from 'src/follows/Follows.Aentity';
-import { ThePost } from 'src/posts/posts.Aentity';
-import { TheReaction } from 'src/Reactions/Reactions.Aentity';
-import { TheReplay } from 'src/Replays/Replays.Aentity';
-import { SavePost } from 'src/savePosts/savePost.Aentity';
+import { Comment } from '../comments/comments.entity';
+import { TheFollow } from '../follows/Follows.entity';
+import { ThePost } from '../posts/posts.entity';
+import { TheReaction } from '../Reactions/Reactions.entity';
+import { TheReplay } from '../Replays/Replays.entity';
+import { SavePost } from '../savePosts/savePost.entity';
 import {
   Column,
   CreateDateColumn,

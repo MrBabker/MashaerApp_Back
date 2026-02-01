@@ -4,9 +4,9 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TheFollow } from './Follows.Aentity';
+import { TheFollow } from './Follows.entity';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/users.aentites';
+import { User } from '../users/users.entity';
 
 @Injectable()
 export class FollowsService {

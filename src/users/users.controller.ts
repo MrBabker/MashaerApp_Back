@@ -13,13 +13,13 @@ import {
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDTO } from './DTOs/CreateUser.DTO';
-import { User } from './users.aentites';
+import { User } from './users.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { LoginUserDTO } from './DTOs/LoginUser.DTO';
 import { AuthGuard } from './gaurds/authUser.guard';
 import { CurrntDecorator } from './decoders/currentUser.decoder';
-import type { JWT_Payload } from 'src/utils';
+import type { JWT_Payload } from '../utils';
 import { UpdateUserDTO } from './DTOs/UpdateUser.DTO';
 import { VisibleUserDTO } from './DTOs/VisibleUser.DTO';
 
