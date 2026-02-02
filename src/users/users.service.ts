@@ -156,14 +156,26 @@ export class UsersService {
       const updatedUser = await this.userRepos.save(user);
 
       // إرجاع بيانات نظيفة
-      return {
+      const payload: JWT_Payload = {
         id: updatedUser.id,
-        name: updatedUser.name,
-        image: updatedUser.image,
         email: updatedUser.email,
+        name: updatedUser.name,
+        username: updatedUser.username,
+        tag: updatedUser.tag,
+        usertag: updatedUser.usertag,
+        image: updatedUser.image,
+        isAdmin: updatedUser.isAdmin,
+        isVisible: updatedUser.isVisible,
         createdAt: updatedUser.createdAt,
         updatedAt: updatedUser.updatedAt,
+        posts: updatedUser.posts,
+        comments: updatedUser.comments,
+        replays: updatedUser.replays,
+        reaction: updatedUser.reaction,
       };
+      const token = this.jwtService.sign(payload);
+
+      return { message: 'Logged', user: user, token };
     } catch (error) {
       // Email duplicate مثلاً
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
