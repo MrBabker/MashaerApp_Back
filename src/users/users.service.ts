@@ -150,6 +150,7 @@ export class UsersService {
     // تحديث الحقول المسموح بها فقط
     if (dto.name !== undefined) user.name = dto.name.toLowerCase();
     if (dto.email !== undefined) user.email = dto.email.toLowerCase();
+    if (dto.image !== undefined) user.image = dto.image;
 
     try {
       const updatedUser = await this.userRepos.save(user);
@@ -158,6 +159,7 @@ export class UsersService {
       return {
         id: updatedUser.id,
         name: updatedUser.name,
+        image: updatedUser.image,
         email: updatedUser.email,
         createdAt: updatedUser.createdAt,
         updatedAt: updatedUser.updatedAt,
